@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="src\assets\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\998f8ff1ed26f6c55914.serviceworker.js" />
+    <None Include="wwwroot\998f8ff1ed26f6c55914.serviceworker.js.map" />
+    <None Include="wwwroot\ddc984d824b52ac5132a.serviceworker.js" />
+    <None Include="wwwroot\ddc984d824b52ac5132a.serviceworker.js.map" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\static\css\app.74e3505d16b191771489102bd8a28c25.css" />
+    <None Include="wwwroot\static\css\app.74e3505d16b191771489102bd8a28c25.css.map" />
+    <None Include="wwwroot\static\fonts\fontawesome-pro-light-300.253267b.eot" />
+    <None Include="wwwroot\static\fonts\fontawesome-pro-light-300.285ee8f.ttf" />
+    <None Include="wwwroot\static\fonts\fontawesome-pro-light-300.db6233f.woff" />
+    <None Include="wwwroot\static\fonts\fontawesome-pro-light-300.fbcc16c.woff2" />
+    <None Include="wwwroot\static\img\fontawesome-pro-light-300.8d89dfc.svg" />
+    <None Include="wwwroot\static\img\logo.ca0bdc7.jpg" />
+    <None Include="wwwroot\static\js\app.72f33faeaa5c494e8d94.js" />
+    <None Include="wwwroot\static\js\app.72f33faeaa5c494e8d94.js.map" />
+    <None Include="wwwroot\static\js\manifest.2ae2e69a05c33dfc65f8.js" />
+    <None Include="wwwroot\static\js\manifest.2ae2e69a05c33dfc65f8.js.map" />
+    <None Include="wwwroot\static\js\vendor.792127a381aaacf2de81.js" />
+    <None Include="wwwroot\static\js\vendor.792127a381aaacf2de81.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tmag.Common\Tmag.Common.csproj" />
+    <ProjectReference Include="..\Tmag.Identity\Tmag.Identity.csproj" />
+  </ItemGroup>
+
+</Project>

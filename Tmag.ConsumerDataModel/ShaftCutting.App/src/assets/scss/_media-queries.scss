@@ -1,0 +1,85 @@
+$screen-sm-min: 768px;
+$shadow: 0 2px 3px rgba(0, 0, 0, .2);
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding-left: 18px !important;
+        padding-right: 18px;
+        .dashboard-patients {
+            width: 100%;
+            float: none !important;
+            margin-bottom: 18px;
+        }
+        .full-height-widgets {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 75px !important;
+        }
+    }
+    .nav-bar-main {
+        .home-button {
+            left: 75px;
+        }
+    }
+    .chat-wrapper {
+        width: 100%;
+        right: 0;
+        position: fixed;
+    }
+    .global-actions {
+        &.action-wrapper {
+            margin: 0;
+            right: 16px;
+            bottom: 60px;
+            .buttons {
+                width: 50px;
+                height: 50px;
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .patients {
+        padding-left: 18px;
+        padding-right: 18px;
+        .card {
+            &.profile {
+                width: 100%;
+                float: inherit;
+                margin-bottom: 18px;
+            }
+        }
+        .activity-feed-wrapper {
+            width: 100%;
+            float: inherit;
+            margin-bottom: 18px;
+            &.closed {
+                width: 100%;
+                float: inherit;
+                .card {
+                    background-color: $white;
+                    .card-header,
+                    .card-body {
+                        display: inherit;
+                    }
+                }
+            }
+        }
+        .content {
+            padding: 0;
+            overflow-y: inherit;
+            overflow-x: inherit;
+            .container-fluid {
+                padding-left: 0;
+                padding-right: 0;
+                .card {
+                    margin-top: 0;
+                }
+                .row-margin:nth-last-child(1) {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+    }
+}

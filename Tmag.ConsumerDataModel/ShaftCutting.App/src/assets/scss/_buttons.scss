@@ -1,0 +1,133 @@
+.btn {
+    outline: none !important;
+    &:hover,
+    &:active,
+    &:focus {
+        i {
+            color: $white;
+        }
+    }
+    i {
+        color: $main-color;
+    }
+}
+
+.btn:disabled {
+    background-color: $gray-300 !important;
+    border-color: $gray-600 !important;
+    &:hover {
+        background-color: $gray-300 !important;
+        border-color: $gray-600 !important;
+        color: rgba($black, 0.26);
+    }
+}
+
+.btn.btn-outline-primary {
+    &.active,
+    &:active,
+    &:focus {
+        color: $white;
+        background-color: darken($main-color, 8%);
+        box-shadow: none;
+        border-color: darken($main-color, 15%);
+    }
+    &.active {
+        &:active,
+        &:focus {
+            color: $white;
+            background-color: darken($main-color, 8%);
+        }
+    }
+}
+
+.btn.btn-outline-danger {
+    &:hover {
+        background-color: $red;
+        color: $white;
+    }
+    &.active,
+    &:active,
+    &:focus {
+        color: $white;
+        background-color: darken($red, 8%);
+        box-shadow: none;
+        border-color: darken($red, 15%);
+    }
+    &.active {
+        &:active,
+        &:focus {
+            color: $white;
+            background-color: darken($red, 8%);
+        }
+    }
+}
+
+.btn-solid-primary {
+    background-color: $main-color;
+    i {
+        color: $white;
+    }
+    &:hover {
+        background-color: darken($main-color, 8%);
+        &:active,
+        {
+            color: $white;
+            background-color: darken($main-color, 8%);
+        }
+    }
+    &:active,
+    &:focus,
+    &:visited {
+        color: $white;
+        background-color: darken($main-color, 8%);
+    }
+}
+
+.btn-solid-danger {
+    background-color: $danger;
+    color: $white;
+    i {
+        color: $white;
+    }
+    &:hover {
+        color: $white;
+        background-color: darken($danger, 8%);
+        &:active,
+        {
+            color: $white;
+            background-color: darken($danger, 8%);
+        }
+    }
+    &:active,
+    &:focus,
+    &:visited {
+        color: $white;
+        background-color: darken($danger, 8%);
+    }
+}
+
+.btn.btn-outline-primary:active:hover,
+.btn-outline-primary.custom-file-control:active:hover::before,
+.btn.btn-outline-primary:active:focus,
+.btn-outline-primary.custom-file-control:active:focus::before,
+.btn.btn-outline-primary:active.focus,
+.btn-outline-primary.custom-file-control:active.focus::before,
+.btn.btn-outline-primary.active:hover,
+.btn-outline-primary.active.custom-file-control:hover::before,
+.btn.btn-outline-primary.active:focus,
+.btn-outline-primary.active.custom-file-control:focus::before,
+.btn.btn-outline-primary.active.focus,
+.btn-outline-primary.active.focus.custom-file-control::before,
+.open>.btn.btn-outline-primary.dropdown-toggle:hover,
+.open>.btn-outline-primary.dropdown-toggle.custom-file-control:hover::before,
+.open>.btn.btn-outline-primary.dropdown-toggle:focus,
+.open>.btn-outline-primary.dropdown-toggle.custom-file-control:focus::before,
+.open>.btn.btn-outline-primary.dropdown-toggle.focus,
+.open>.btn-outline-primary.dropdown-toggle.focus.custom-file-control::before {
+    color: $white;
+    background-color: darken($main-color, 8%);
+    border-color: darken($main-color, 15%);
+    i {
+        color: $white;
+    }
+}

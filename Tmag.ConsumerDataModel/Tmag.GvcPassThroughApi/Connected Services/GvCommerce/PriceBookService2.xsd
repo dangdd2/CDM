@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://pubservices.gvcommerce.com/PriceBookService/2014/09" elementFormDefault="qualified" targetNamespace="https://pubservices.gvcommerce.com/PriceBookService/2014/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="BatchTradeInResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebServiceResponse">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FailedTradeIns" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+          <xs:element minOccurs="0" name="SuccessfulTradeIns" nillable="true" type="tns:ArrayOfTradeInResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BatchTradeInResponse" nillable="true" type="tns:BatchTradeInResponse" />
+  <xs:complexType name="WebServiceResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="Exception" nillable="true" type="q2:Exception" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSuccessful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeMilliseconds" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServiceResponse" nillable="true" type="tns:WebServiceResponse" />
+  <xs:complexType name="ArrayOfTradeInResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeInResponse" nillable="true" type="tns:TradeInResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeInResponse" nillable="true" type="tns:ArrayOfTradeInResponse" />
+  <xs:complexType name="TradeInResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PublicTradeInID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuoteTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RANumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradeInItems" nillable="true" type="tns:ArrayOfTradeInItemResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeInResponse" nillable="true" type="tns:TradeInResponse" />
+  <xs:complexType name="ArrayOfTradeInItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeInItemResponse" nillable="true" type="tns:TradeInItemResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeInItemResponse" nillable="true" type="tns:ArrayOfTradeInItemResponse" />
+  <xs:complexType name="TradeInItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:int" />
+      <xs:element minOccurs="0" name="LineItem" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="QuotePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SetPieceCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ShaftTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeInItemResponse" nillable="true" type="tns:TradeInItemResponse" />
+  <xs:element name="GetPriceBookFull">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceBookFullResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceBookFullResult" nillable="true" type="tns:ArrayOfPriceBookItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfPriceBookItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PriceBookItem" nillable="true" type="tns:PriceBookItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPriceBookItem" nillable="true" type="tns:ArrayOfPriceBookItem" />
+  <xs:complexType name="PriceBookItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURLLarge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURLReg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURLSmall" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURLThumb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ModelID" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SetPieceCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ShaftTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ShaftTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceBookItem" nillable="true" type="tns:PriceBookItem" />
+  <xs:complexType name="PriceBookFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceBookFault" nillable="true" type="tns:PriceBookFault" />
+  <xs:element name="GetPriceBookItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="request" nillable="true" type="tns:PriceBookRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PriceBookRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelID" type="xs:int" />
+      <xs:element name="ProductTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ShaftTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceBookRequest" nillable="true" type="tns:PriceBookRequest" />
+  <xs:element name="GetPriceBookItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceBookItemsResult" nillable="true" type="tns:ArrayOfPriceBookItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductTypeList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductTypeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductTypeListResult" nillable="true" type="tns:ArrayOfProductType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfProductType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductType" nillable="true" type="tns:ProductType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductType" nillable="true" type="tns:ArrayOfProductType" />
+  <xs:complexType name="ProductType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductType" nillable="true" type="tns:ProductType" />
+  <xs:element name="GetBrandList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBrandListResult" nillable="true" type="tns:ArrayOfBrand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfBrand">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Brand" nillable="true" type="tns:Brand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBrand" nillable="true" type="tns:ArrayOfBrand" />
+  <xs:complexType name="Brand">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Brand" nillable="true" type="tns:Brand" />
+  <xs:element name="GetModelList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModelListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetModelListResult" nillable="true" type="tns:ArrayOfModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Model" nillable="true" type="tns:Model" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModel" nillable="true" type="tns:ArrayOfModel" />
+  <xs:complexType name="Model">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ImageURLLarge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURLReg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURLSmall" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURLThumb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelID" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Model" nillable="true" type="tns:Model" />
+  <xs:element name="GetShaftList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="modelID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShaftListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetShaftListResult" nillable="true" type="tns:ArrayOfShaftType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfShaftType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShaftType" nillable="true" type="tns:ShaftType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShaftType" nillable="true" type="tns:ArrayOfShaftType" />
+  <xs:complexType name="ShaftType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShaftTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ShaftTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShaftType" nillable="true" type="tns:ShaftType" />
+  <xs:element name="GetItemPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="modelID" type="xs:int" />
+        <xs:element minOccurs="0" name="shaftTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="setPieceCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetItemPriceResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quoteID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetQuoteByIDResult" nillable="true" type="tns:Quote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Quote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QuoteId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuoteItems" nillable="true" type="tns:ArrayOfQuoteItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Quote" nillable="true" type="tns:Quote" />
+  <xs:complexType name="ArrayOfQuoteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuoteItem" nillable="true" type="tns:QuoteItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuoteItem" nillable="true" type="tns:ArrayOfQuoteItem" />
+  <xs:complexType name="QuoteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ModelID" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductTypeName" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="QuoteID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShaftTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ShaftTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuoteItem" nillable="true" type="tns:QuoteItem" />
+  <xs:element name="AddItemToQuote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quoteID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="modelID" type="xs:int" />
+        <xs:element minOccurs="0" name="shaftTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="qty" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddItemToQuoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddItemToQuoteResult" nillable="true" type="tns:Quote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveItemFromQuote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quoteID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveItemFromQuoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveItemFromQuoteResult" nillable="true" type="tns:Quote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateItemQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quoteID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="qty" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateItemQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateItemQuantityResult" nillable="true" type="tns:Quote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveQuoteByEmailAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quoteID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveQuoteByEmailAddressResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteByEmailAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuoteByEmailAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetQuoteByEmailAddressResult" nillable="true" type="tns:Quote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBatchTradeIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradeIns" nillable="true" type="tns:ArrayOfTradeIn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfTradeIn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeIn" nillable="true" type="tns:TradeIn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeIn" nillable="true" type="tns:ArrayOfTradeIn" />
+  <xs:complexType name="TradeIn">
+    <xs:sequence>
+      <xs:element name="CustomerAddress" nillable="true" type="tns:Address" />
+      <xs:element name="CustomerEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NVIAction" type="tns:NVIActionEnum" />
+      <xs:element name="ReferenceID" nillable="true" type="xs:string" />
+      <xs:element name="TradeInItems" nillable="true" type="tns:ArrayOfTradeInItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeIn" nillable="true" type="tns:TradeIn" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine3" nillable="true" type="xs:string" />
+      <xs:element name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryAbbrv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element name="StateProvince" nillable="true" type="xs:string" />
+      <xs:element name="ToName" nillable="true" type="xs:string" />
+      <xs:element name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:simpleType name="NVIActionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Return">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dispose">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NVIActionEnum" nillable="true" type="tns:NVIActionEnum" />
+  <xs:complexType name="ArrayOfTradeInItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeInItem" nillable="true" type="tns:TradeInItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeInItem" nillable="true" type="tns:ArrayOfTradeInItem" />
+  <xs:complexType name="TradeInItem">
+    <xs:sequence>
+      <xs:element name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemPrice" type="xs:decimal" />
+      <xs:element name="ModelID" type="xs:int" />
+      <xs:element name="ProductTypeID" type="xs:int" />
+      <xs:element name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="SetPieceCount" type="xs:int" />
+      <xs:element name="ShaftTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeInItem" nillable="true" type="tns:TradeInItem" />
+  <xs:element name="ProcessBatchTradeInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessBatchTradeInResult" nillable="true" type="tns:BatchTradeInResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

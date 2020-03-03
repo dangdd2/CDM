@@ -1,0 +1,40 @@
+.text-black {
+    color: $black;
+}
+
+.text-muted {
+    color: $gray-600;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-bisvine {
+    color: $main-color !important;
+}
+
+.strong {
+    font-weight: 600;
+}
+
+.text-sm {
+    font-size: $text-sm;
+}
+
+.text-xs {
+    font-size: $text-xs;
+}
+
+i,
+.fal {
+    cursor: pointer;
+    color: $icon-color;
+    &:hover {
+        color: $text-color;
+    }
+}

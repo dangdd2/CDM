@@ -1,0 +1,65 @@
+CONSUMER API CONTROLLER
+
+
+// to create new consumer we need to provide new EMAIL , DO NOT INPUT consumerid or, consumerProfileId
+{
+  
+  "regionId": "d890342d-fcc4-4d4d-2f11-08d5483c74a8",
+  "country": "USA",
+  "email": "dangdd6@yahoo.com.vn",
+  "firstName": "Dinh",
+  "lastName": "Dang",
+  "handicapRange": 19,
+  "gender": "m",
+  "postalCode": "12345",
+  "phoneHome": 976094792,
+  "description": "Description for Dang",
+  "handicap": 13,
+  "dob": "1976-12-15T15:49:14Z",
+  "rpm": null,
+  "systemId": "70943dc7-1fb0-47f5-c090-08d548a143ba"
+}
+
+
+
+
+//CONSUMER_ID with mutiple consumer profile
+{
+  "consumerId":"C8DA57B1-DAA6-4E4B-0ED9-08D54BBEC2C7",
+  "regionId": "d890342d-fcc4-4d4d-2f11-08d5483c74a8",
+  "country": "USA",
+  
+  "firstName": "Dinh",
+  "lastName": "Dang",
+  "handicapRange": 19,
+  "gender": "m",
+  "postalCode": "12345",
+  "phoneHome": 976094792,
+  "description": "Description for Dang",
+  "handicap": 13,
+  "dob": "1976-12-15T15:49:14Z",
+  "rpm": null,
+  "systemId": "70943dc7-1fb0-47f5-c090-08d548a143ba"
+}
+
+{
+  "consumerProfileId":"913ac0cd-9b28-4113-8163-08d6aedd6f20",
+  "regionId": "d890342d-fcc4-4d4d-2f11-08d5483c74a8",
+  "country": "USA",
+  
+  "firstName": "Dinh",
+  "lastName": "Dang",
+  "handicapRange": 19,
+  "gender": "m",
+  "postalCode": "12345",
+  "phoneHome": 976094792,
+  "description": "Description for Dang",
+  "handicap": 13,
+  "dob": "1976-12-15T15:49:14Z",
+  "rpm": null,
+  "systemId": "70943dc7-1fb0-47f5-c090-08d548a143ba"
+}
+
+
+
+

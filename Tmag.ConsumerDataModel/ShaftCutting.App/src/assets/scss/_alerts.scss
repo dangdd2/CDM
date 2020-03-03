@@ -1,0 +1,24 @@
+.flag-disabled {
+  display: none !important;
+}
+
+.flag-info {
+  color: $blue !important;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.flag-warning {
+  color: $orange !important;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.flag-alert {
+  color: $red !important;
+  &:hover {
+    color: inherit;
+  }
+}

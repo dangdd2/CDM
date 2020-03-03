@@ -1,0 +1,2681 @@
+{
+	"id": "6cd127be-9964-4ee3-9ce5-2a846f833683",
+	"name": "CDM Web Service - Dev",
+	"allTests": [],
+	"timestamp": "2019-03-29T03:31:16.251Z",
+	"collection_id": "024d13f8-8215-4c0b-9287-f757e87b91a6",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "5b07f35e-b34a-47ba-804b-483658f52e95",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "024d13f8-8215-4c0b-9287-f757e87b91a6",
+		"name": "CDM Web Service - Dev",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [
+			"39a06cf1-e02d-430e-833e-10b8335238e9",
+			"622e61ba-0d9f-41de-9fe7-c96b634b1bd1",
+			"1ea0405e-41e1-4d31-b1b1-94b85f99d37a",
+			"8e9a6051-4509-4c0d-84fa-9b7d03920cff",
+			"2b2f904e-712a-429f-be96-955dafdc3edb",
+			"303161af-78cd-46ca-ba0c-145a7553a03f",
+			"edf71227-1444-4d1e-a8c9-d5a6345aebd3",
+			"82d852b8-dc7b-49b6-88fa-d378e6db06a6",
+			"324a8a8e-81b9-4056-9e91-6f12d588290f",
+			"132e3226-73c5-41be-b391-a36fe9abbbcf",
+			"064099ff-cc7b-4200-9706-2ffa4f5c5aaa",
+			"b09e3f23-696e-48e9-a5d0-faf3e0cb668b",
+			"850289ea-3021-4872-930b-ba8489ba0c69",
+			"bccfc7ea-0a8d-41e8-95e6-86c66f75fd6c",
+			"de02aba1-a024-41a1-93f3-ee6ccb1a6523",
+			"3c3d99f4-2bdb-41ab-8278-6ba7b46a1a06",
+			"ad951415-febc-458b-b350-b53bda0eefba",
+			"872dedd0-7e11-459f-93a6-b24d56924b65",
+			"c523fbf5-6054-4ebb-8a8e-b19040edebf1",
+			"55a722ed-c09c-4f9b-9b47-3d562f80c403",
+			"f154e20b-c11a-40f2-92f1-caa8b2a5843a",
+			"47b254ca-71a6-455d-8a98-80f0afa87e12",
+			"80093420-436e-432d-bc43-7bac6031bee9",
+			"7f0e3906-f237-4cdc-8a79-fd4c39e0e793",
+			"63bb1cbe-f4a9-4d8a-8431-dbfb7c5c475c",
+			"003f442d-2bd8-4b50-a161-817343568e34",
+			"881e5579-af9b-46b3-a23b-8ae52d92f3c2",
+			"2448bba8-67a4-43de-acfc-ea538e2f1c0c",
+			"d949a4c3-d860-4180-88aa-783cee010b70",
+			"cd616381-4239-4769-9e29-42ddcbda34b1",
+			"25b8be51-1d19-4926-83d8-f6497474fc35",
+			"af9d7bf9-46a1-4f80-9ede-9a572fed775a",
+			"2385c9b5-bc65-40c3-ae38-c3899515d405",
+			"a2dfb2f4-08dd-4f6f-919b-b6f54927075c",
+			"52695dfc-747c-4214-95b1-6cb02954df28",
+			"6ecb1020-8561-4849-909e-aae209d833d7",
+			"815e7d10-7827-48b3-8cd7-516d1809b865",
+			"16974a8d-3967-4bdc-a18c-cc9846bca573",
+			"e298010c-41fa-4d90-b7cc-a3b66aa16004",
+			"69dfb0ae-89e4-4253-9ef3-468839176603",
+			"a7f4e258-25e3-4e27-a7d0-77a267ac7641",
+			"9da02e43-8a4b-4b08-93b6-b8f26a064e09",
+			"5071292c-b2f7-4ba6-bf2e-617a6980c2e3",
+			"79de676f-cce1-4a9a-b289-d9416f6b6257",
+			"d7aa53c2-5ff0-4cc9-961f-85c9ff6c8de3",
+			"2b5ae524-4496-4a57-9958-0cee140ba45e",
+			"f8bec571-a436-4239-8639-4f9f2098f63f",
+			"ffc651e3-66b4-4279-a468-b0fdea42bf5f"
+		],
+		"folders_order": [],
+		"owner": "5299462",
+		"favorite": true,
+		"isFavorite": true,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "Authentication",
+			"id": "39a06cf1-e02d-430e-833e-10b8335238e9",
+			"url": "http://localhost:52407/api/AuthUser",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"79"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "79",
+			"totalRequestTime": "79",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create or Update Consumer",
+			"id": "622e61ba-0d9f-41de-9fe7-c96b634b1bd1",
+			"url": "http://localhost:52407/api/consumer/addUpdate",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"207"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "207",
+			"totalRequestTime": "207",
+			"iterationResults": {}
+		},
+		{
+			"name": "Query Consumer by ID",
+			"id": "1ea0405e-41e1-4d31-b1b1-94b85f99d37a",
+			"url": "http://localhost:52407/api/consumer/query?consumerId=7473D440-1794-4CF5-995B-0089167332A2&regionId=AC90342D-FCC4-4D4D-2F11-08D5483C74A8",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"106"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "106",
+			"totalRequestTime": "106",
+			"iterationResults": {}
+		},
+		{
+			"name": "Query Consumer by Email",
+			"id": "8e9a6051-4509-4c0d-84fa-9b7d03920cff",
+			"url": "http://localhost:52407/api/consumer/query?email=sundeep.palavalli@ext.taylormadegolf.com&regionId=AC90342D-FCC4-4D4D-2F11-08D5483C74A8",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"155"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "155",
+			"totalRequestTime": "155",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Consumer by ID",
+			"id": "2b2f904e-712a-429f-be96-955dafdc3edb",
+			"url": "http://localhost:52407/api/consumer/query?regionId=D890342D-FCC4-4D4D-2F11-08D5483C74A8&consumerId=5E4FA2A3-843E-46C0-FAB1-08D5483CE2B9&systemId=D6F3A36B-D2E6-4182-8001-08D5483CE271",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"69"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "69",
+			"totalRequestTime": "69",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create WhatsInTheBag",
+			"id": "303161af-78cd-46ca-ba0c-145a7553a03f",
+			"url": "http://localhost:52407/api/whatsInTheBag/create",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"146"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "146",
+			"totalRequestTime": "146",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get WhatsInTheBag By ID",
+			"id": "edf71227-1444-4d1e-a8c9-d5a6345aebd3",
+			"url": "http://localhost:52407/api/whatsInTheBag/D758A383-D4B1-47D7-4BB2-08D5496B2B10",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"24"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "24",
+			"totalRequestTime": "24",
+			"iterationResults": {}
+		},
+		{
+			"name": "Update WhatsInTheBag",
+			"id": "82d852b8-dc7b-49b6-88fa-d378e6db06a6",
+			"url": "http://localhost:52407/api/whatsInTheBag/update",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"43"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "43",
+			"totalRequestTime": "43",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create Region",
+			"id": "324a8a8e-81b9-4056-9e91-6f12d588290f",
+			"url": "http://localhost:52407/api/Region",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"23"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "23",
+			"totalRequestTime": "23",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Region",
+			"id": "132e3226-73c5-41be-b391-a36fe9abbbcf",
+			"url": "http://localhost:52407/api/region?take=10&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"24"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "24",
+			"totalRequestTime": "24",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Region by ID",
+			"id": "064099ff-cc7b-4200-9706-2ffa4f5c5aaa",
+			"url": "http://localhost:52407/api/Region/AC90342D-FCC4-4D4D-2F11-08D5483C74A8",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubHand",
+			"id": "b09e3f23-696e-48e9-a5d0-faf3e0cb668b",
+			"url": "http://localhost:52407/api/clubHand?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubHand by ID",
+			"id": "850289ea-3021-4872-930b-ba8489ba0c69",
+			"url": "http://localhost:52407/api/ClubHand/3EBD8650-4158-40F7-53F1-08D5483CE2DA",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ClubLoft",
+			"id": "bccfc7ea-0a8d-41e8-95e6-86c66f75fd6c",
+			"url": "http://localhost:52407/api/ClubLoft",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"27"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "27",
+			"totalRequestTime": "27",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubLoft",
+			"id": "de02aba1-a024-41a1-93f3-ee6ccb1a6523",
+			"url": "http://localhost:52407/api/ClubLoft?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubLoft by ID",
+			"id": "3c3d99f4-2bdb-41ab-8278-6ba7b46a1a06",
+			"url": "http://localhost:52407/api/ClubLoft/140807CF-8CD5-4791-D353-08D5483C762C",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"23"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "23",
+			"totalRequestTime": "23",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubLoft by ClubCategoryId",
+			"id": "ad951415-febc-458b-b350-b53bda0eefba",
+			"url": "http://localhost:52407/api/clubLoft/byCategoryId/1cdc52d9-4ae3-48ab-fbf1-08d5434a9e31",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ClubShaftFlex",
+			"id": "872dedd0-7e11-459f-93a6-b24d56924b65",
+			"url": "http://localhost:52407/api/ClubShaftFlex",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubShaftFlex",
+			"id": "c523fbf5-6054-4ebb-8a8e-b19040edebf1",
+			"url": "http://localhost:52407/api/ClubShaftFlex?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubShaftFlex by ID",
+			"id": "55a722ed-c09c-4f9b-9b47-3d562f80c403",
+			"url": "http://localhost:52407/api/ClubShaftFlex/65F6EB1B-5E49-40DE-BA31-08D5483C7600",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ClubShaftLength",
+			"id": "f154e20b-c11a-40f2-92f1-caa8b2a5843a",
+			"url": "http://localhost:52407/api/ClubShaftLength",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"24"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "24",
+			"totalRequestTime": "24",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubShaftLength",
+			"id": "47b254ca-71a6-455d-8a98-80f0afa87e12",
+			"url": "http://localhost:52407/api/ClubShaftLength?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"25"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "25",
+			"totalRequestTime": "25",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubShaftLength by ID",
+			"id": "80093420-436e-432d-bc43-7bac6031bee9",
+			"url": "http://localhost:52407/api/ClubShaftLength/53E9E7DE-366E-4BA4-F771-08D5483C78E9",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ClubLie",
+			"id": "7f0e3906-f237-4cdc-8a79-fd4c39e0e793",
+			"url": "http://localhost:52407/api/ClubLie",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubLie",
+			"id": "63bb1cbe-f4a9-4d8a-8431-dbfb7c5c475c",
+			"url": "http://localhost:52407/api/ClubLie?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubLie by ID",
+			"id": "003f442d-2bd8-4b50-a161-817343568e34",
+			"url": "http://localhost:52407/api/ClubLie/F9DB2D0C-553A-4E3C-B2F1-08D5483C7967",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create System",
+			"id": "881e5579-af9b-46b3-a23b-8ae52d92f3c2",
+			"url": "http://localhost:52407/api/System",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All System",
+			"id": "2448bba8-67a4-43de-acfc-ea538e2f1c0c",
+			"url": "http://localhost:52407/api/System?take=9999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"25"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "25",
+			"totalRequestTime": "25",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get System by ID",
+			"id": "d949a4c3-d860-4180-88aa-783cee010b70",
+			"url": "http://localhost:52407/api/System/A1F3A36B-D2E6-4182-8001-08D5483CE271",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ClubCategory",
+			"id": "cd616381-4239-4769-9e29-42ddcbda34b1",
+			"url": "http://localhost:52407/api/clubCategory",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"23"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "23",
+			"totalRequestTime": "23",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubCategory",
+			"id": "25b8be51-1d19-4926-83d8-f6497474fc35",
+			"url": "http://localhost:52407/api/clubCategory?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubCategory by ID",
+			"id": "af9d7bf9-46a1-4f80-9ede-9a572fed775a",
+			"url": "http://localhost:52407/api/clubCategory/02A19F4F-AB81-4455-3671-08D5483C75B3",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"23"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "23",
+			"totalRequestTime": "23",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create Brand",
+			"id": "2385c9b5-bc65-40c3-ae38-c3899515d405",
+			"url": "http://localhost:52407/api/brand",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"27"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "27",
+			"totalRequestTime": "27",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Brand",
+			"id": "a2dfb2f4-08dd-4f6f-919b-b6f54927075c",
+			"url": "http://localhost:52407/api/brand?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"26"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "26",
+			"totalRequestTime": "26",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Brand by ClubCategoryId",
+			"id": "52695dfc-747c-4214-95b1-6cb02954df28",
+			"url": "http://localhost:52407/api/brand/byCategoryId/02A19F4F-AB81-4455-3671-08D5483C75B3",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"26"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "26",
+			"totalRequestTime": "26",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Brand by ID",
+			"id": "6ecb1020-8561-4849-909e-aae209d833d7",
+			"url": "http://localhost:52407/api/brand/EC7D1063-2873-4129-6CD1-08D5483C7D24",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create Model",
+			"id": "815e7d10-7827-48b3-8cd7-516d1809b865",
+			"url": "http://localhost:52407/api/model",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"24"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "24",
+			"totalRequestTime": "24",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Model",
+			"id": "16974a8d-3967-4bdc-a18c-cc9846bca573",
+			"url": "http://localhost:52407/api/model?take=9999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"195"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "195",
+			"totalRequestTime": "195",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Model by BrandId",
+			"id": "e298010c-41fa-4d90-b7cc-a3b66aa16004",
+			"url": "http://localhost:52407/api/model/byBrandId/c3e29452-bc0f-438b-dff7-08d5435b91dc",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"35"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "35",
+			"totalRequestTime": "35",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Model by ID",
+			"id": "69dfb0ae-89e4-4253-9ef3-468839176603",
+			"url": "http://localhost:52407/api/model/D8DB582F-1D5E-4F65-CC61-08D5483C7D25",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ClubLoftAdjustment",
+			"id": "a7f4e258-25e3-4e27-a7d0-77a267ac7641",
+			"url": "http://localhost:52407/api/clubLoftAdjustment",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubLoftAdjustment",
+			"id": "9da02e43-8a4b-4b08-93b6-b8f26a064e09",
+			"url": "http://localhost:52407/api/clubLoftAdjustment?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ClubCategoryType",
+			"id": "5071292c-b2f7-4ba6-bf2e-617a6980c2e3",
+			"url": "http://localhost:52407/api/clubCategoryType",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All ClubCategoryType",
+			"id": "79de676f-cce1-4a9a-b289-d9416f6b6257",
+			"url": "http://localhost:52407/api/clubCategoryType?take=999&skip=0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ClubCategoryType by ClubCategoryId",
+			"id": "d7aa53c2-5ff0-4cc9-961f-85c9ff6c8de3",
+			"url": "http://localhost:52407/api/clubCategoryType/byCategoryId/1379a840-3f70-41f3-4b39-08d540e95db8",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create ConsumerExperience",
+			"id": "2b5ae524-4496-4a57-9958-0cee140ba45e",
+			"url": "http://localhost:52407/api/consumerExperience/create",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"25"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "25",
+			"totalRequestTime": "25",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ConsumerExperience by ID",
+			"id": "f8bec571-a436-4239-8639-4f9f2098f63f",
+			"url": "http://localhost:52407/api/consumerExperience/ED438688-CE3F-4E82-12B2-08D548A1F8A4",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "21",
+			"totalRequestTime": "21",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get ConsumerExperience by ID copy",
+			"id": "ffc651e3-66b4-4279-a468-b0fdea42bf5f",
+			"url": "http://localhost:52407/api/consumerExperience/query?email=tmagfitting.chad.hill@gmail.com&regionId=2d58f505-a295-44ab-776c-08d540ea0bdc",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"107"
+			],
+			"allTests": [
+				{
+					"response is ok": true
+				}
+			],
+			"time": "107",
+			"totalRequestTime": "107",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 48,
+	"totalFail": 0,
+	"totalTime": 1996,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Authentication",
+			"id": "39a06cf1-e02d-430e-833e-10b8335238e9",
+			"url": "http://localhost:52407/api/AuthUser",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create or Update Consumer",
+			"id": "622e61ba-0d9f-41de-9fe7-c96b634b1bd1",
+			"url": "http://localhost:52407/api/consumer/addUpdate",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Query Consumer by ID",
+			"id": "1ea0405e-41e1-4d31-b1b1-94b85f99d37a",
+			"url": "http://localhost:52407/api/consumer/query?consumerId=7473D440-1794-4CF5-995B-0089167332A2&regionId=AC90342D-FCC4-4D4D-2F11-08D5483C74A8",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Query Consumer by Email",
+			"id": "8e9a6051-4509-4c0d-84fa-9b7d03920cff",
+			"url": "http://localhost:52407/api/consumer/query?email=sundeep.palavalli@ext.taylormadegolf.com&regionId=AC90342D-FCC4-4D4D-2F11-08D5483C74A8",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Consumer by ID",
+			"id": "2b2f904e-712a-429f-be96-955dafdc3edb",
+			"url": "http://localhost:52407/api/consumer/query?regionId=D890342D-FCC4-4D4D-2F11-08D5483C74A8&consumerId=5E4FA2A3-843E-46C0-FAB1-08D5483CE2B9&systemId=D6F3A36B-D2E6-4182-8001-08D5483CE271",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create WhatsInTheBag",
+			"id": "303161af-78cd-46ca-ba0c-145a7553a03f",
+			"url": "http://localhost:52407/api/whatsInTheBag/create",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get WhatsInTheBag By ID",
+			"id": "edf71227-1444-4d1e-a8c9-d5a6345aebd3",
+			"url": "http://localhost:52407/api/whatsInTheBag/D758A383-D4B1-47D7-4BB2-08D5496B2B10",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Update WhatsInTheBag",
+			"id": "82d852b8-dc7b-49b6-88fa-d378e6db06a6",
+			"url": "http://localhost:52407/api/whatsInTheBag/update",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create Region",
+			"id": "324a8a8e-81b9-4056-9e91-6f12d588290f",
+			"url": "http://localhost:52407/api/Region",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Region",
+			"id": "132e3226-73c5-41be-b391-a36fe9abbbcf",
+			"url": "http://localhost:52407/api/region?take=10&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Region by ID",
+			"id": "064099ff-cc7b-4200-9706-2ffa4f5c5aaa",
+			"url": "http://localhost:52407/api/Region/AC90342D-FCC4-4D4D-2F11-08D5483C74A8",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubHand",
+			"id": "b09e3f23-696e-48e9-a5d0-faf3e0cb668b",
+			"url": "http://localhost:52407/api/clubHand?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubHand by ID",
+			"id": "850289ea-3021-4872-930b-ba8489ba0c69",
+			"url": "http://localhost:52407/api/ClubHand/3EBD8650-4158-40F7-53F1-08D5483CE2DA",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ClubLoft",
+			"id": "bccfc7ea-0a8d-41e8-95e6-86c66f75fd6c",
+			"url": "http://localhost:52407/api/ClubLoft",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubLoft",
+			"id": "de02aba1-a024-41a1-93f3-ee6ccb1a6523",
+			"url": "http://localhost:52407/api/ClubLoft?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubLoft by ID",
+			"id": "3c3d99f4-2bdb-41ab-8278-6ba7b46a1a06",
+			"url": "http://localhost:52407/api/ClubLoft/140807CF-8CD5-4791-D353-08D5483C762C",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubLoft by ClubCategoryId",
+			"id": "ad951415-febc-458b-b350-b53bda0eefba",
+			"url": "http://localhost:52407/api/clubLoft/byCategoryId/1cdc52d9-4ae3-48ab-fbf1-08d5434a9e31",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ClubShaftFlex",
+			"id": "872dedd0-7e11-459f-93a6-b24d56924b65",
+			"url": "http://localhost:52407/api/ClubShaftFlex",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubShaftFlex",
+			"id": "c523fbf5-6054-4ebb-8a8e-b19040edebf1",
+			"url": "http://localhost:52407/api/ClubShaftFlex?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubShaftFlex by ID",
+			"id": "55a722ed-c09c-4f9b-9b47-3d562f80c403",
+			"url": "http://localhost:52407/api/ClubShaftFlex/65F6EB1B-5E49-40DE-BA31-08D5483C7600",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ClubShaftLength",
+			"id": "f154e20b-c11a-40f2-92f1-caa8b2a5843a",
+			"url": "http://localhost:52407/api/ClubShaftLength",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubShaftLength",
+			"id": "47b254ca-71a6-455d-8a98-80f0afa87e12",
+			"url": "http://localhost:52407/api/ClubShaftLength?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubShaftLength by ID",
+			"id": "80093420-436e-432d-bc43-7bac6031bee9",
+			"url": "http://localhost:52407/api/ClubShaftLength/53E9E7DE-366E-4BA4-F771-08D5483C78E9",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ClubLie",
+			"id": "7f0e3906-f237-4cdc-8a79-fd4c39e0e793",
+			"url": "http://localhost:52407/api/ClubLie",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubLie",
+			"id": "63bb1cbe-f4a9-4d8a-8431-dbfb7c5c475c",
+			"url": "http://localhost:52407/api/ClubLie?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubLie by ID",
+			"id": "003f442d-2bd8-4b50-a161-817343568e34",
+			"url": "http://localhost:52407/api/ClubLie/F9DB2D0C-553A-4E3C-B2F1-08D5483C7967",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create System",
+			"id": "881e5579-af9b-46b3-a23b-8ae52d92f3c2",
+			"url": "http://localhost:52407/api/System",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All System",
+			"id": "2448bba8-67a4-43de-acfc-ea538e2f1c0c",
+			"url": "http://localhost:52407/api/System?take=9999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get System by ID",
+			"id": "d949a4c3-d860-4180-88aa-783cee010b70",
+			"url": "http://localhost:52407/api/System/A1F3A36B-D2E6-4182-8001-08D5483CE271",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ClubCategory",
+			"id": "cd616381-4239-4769-9e29-42ddcbda34b1",
+			"url": "http://localhost:52407/api/clubCategory",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubCategory",
+			"id": "25b8be51-1d19-4926-83d8-f6497474fc35",
+			"url": "http://localhost:52407/api/clubCategory?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubCategory by ID",
+			"id": "af9d7bf9-46a1-4f80-9ede-9a572fed775a",
+			"url": "http://localhost:52407/api/clubCategory/02A19F4F-AB81-4455-3671-08D5483C75B3",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create Brand",
+			"id": "2385c9b5-bc65-40c3-ae38-c3899515d405",
+			"url": "http://localhost:52407/api/brand",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Brand",
+			"id": "a2dfb2f4-08dd-4f6f-919b-b6f54927075c",
+			"url": "http://localhost:52407/api/brand?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Brand by ClubCategoryId",
+			"id": "52695dfc-747c-4214-95b1-6cb02954df28",
+			"url": "http://localhost:52407/api/brand/byCategoryId/02A19F4F-AB81-4455-3671-08D5483C75B3",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Brand by ID",
+			"id": "6ecb1020-8561-4849-909e-aae209d833d7",
+			"url": "http://localhost:52407/api/brand/EC7D1063-2873-4129-6CD1-08D5483C7D24",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create Model",
+			"id": "815e7d10-7827-48b3-8cd7-516d1809b865",
+			"url": "http://localhost:52407/api/model",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Model",
+			"id": "16974a8d-3967-4bdc-a18c-cc9846bca573",
+			"url": "http://localhost:52407/api/model?take=9999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Model by BrandId",
+			"id": "e298010c-41fa-4d90-b7cc-a3b66aa16004",
+			"url": "http://localhost:52407/api/model/byBrandId/c3e29452-bc0f-438b-dff7-08d5435b91dc",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Model by ID",
+			"id": "69dfb0ae-89e4-4253-9ef3-468839176603",
+			"url": "http://localhost:52407/api/model/D8DB582F-1D5E-4F65-CC61-08D5483C7D25",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ClubLoftAdjustment",
+			"id": "a7f4e258-25e3-4e27-a7d0-77a267ac7641",
+			"url": "http://localhost:52407/api/clubLoftAdjustment",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubLoftAdjustment",
+			"id": "9da02e43-8a4b-4b08-93b6-b8f26a064e09",
+			"url": "http://localhost:52407/api/clubLoftAdjustment?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ClubCategoryType",
+			"id": "5071292c-b2f7-4ba6-bf2e-617a6980c2e3",
+			"url": "http://localhost:52407/api/clubCategoryType",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All ClubCategoryType",
+			"id": "79de676f-cce1-4a9a-b289-d9416f6b6257",
+			"url": "http://localhost:52407/api/clubCategoryType?take=999&skip=0",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ClubCategoryType by ClubCategoryId",
+			"id": "d7aa53c2-5ff0-4cc9-961f-85c9ff6c8de3",
+			"url": "http://localhost:52407/api/clubCategoryType/byCategoryId/1379a840-3f70-41f3-4b39-08d540e95db8",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create ConsumerExperience",
+			"id": "2b5ae524-4496-4a57-9958-0cee140ba45e",
+			"url": "http://localhost:52407/api/consumerExperience/create",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ConsumerExperience by ID",
+			"id": "f8bec571-a436-4239-8639-4f9f2098f63f",
+			"url": "http://localhost:52407/api/consumerExperience/ED438688-CE3F-4E82-12B2-08D548A1F8A4",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get ConsumerExperience by ID copy",
+			"id": "ffc651e3-66b4-4279-a468-b0fdea42bf5f",
+			"url": "http://localhost:52407/api/consumerExperience/query?email=tmagfitting.chad.hill@gmail.com&regionId=2d58f505-a295-44ab-776c-08d540ea0bdc",
+			"time": "2019-03-29T03:31:16.251Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

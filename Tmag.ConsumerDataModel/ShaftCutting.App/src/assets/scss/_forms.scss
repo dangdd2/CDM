@@ -1,0 +1,19 @@
+.form-control,
+.custom-file-control,
+.is-focused .form-control,
+.is-focused .custom-file-control {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form-control {
+  border-bottom: 1px solid $gray-200;
+  line-height: inherit;
+}
+
+.user-name {
+  .form-control {
+    border-bottom: none;
+  }
+}

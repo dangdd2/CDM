@@ -1,0 +1,2360 @@
+{
+	"info": {
+		"_postman_id": "024d13f8-8215-4c0b-9287-f757e87b91a6",
+		"name": "CDM Web Service - Dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b8d67399-93d0-4d8c-a138-1c0f4a6fdbc3",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"CDMToken\", jsonData.token);\r",
+							"\r",
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"{{username}}\",\r\n\"password\": \"{{password}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/AuthUser",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"AuthUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create or Update Consumer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1127b4de-8e4b-4253-a80f-bbc90944dfa8",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"regionId\": \"d890342d-fcc4-4d4d-2f11-08d5483c74a8\",\r\n  \"country\": \"USA\",\r\n  \"email\": \"tmagfitting.chad.hill@gmail.com\",\r\n  \"firstName\": \"Chadhill\",\r\n  \"lastName\": \"ZeroZ\",\r\n  \"handicapRange\": 19,\r\n  \"gender\": \"m\",\r\n  \"postalCode\": \"12345\",\r\n  \"phoneHome\": 12345670,\r\n  \"description\": \"This is a description\",\r\n  \"handicap\": 13,\r\n  \"dob\": \"1976-12-15T15:49:14Z\",\r\n  \"rpm\": null,\r\n  \"systemId\": \"70943dc7-1fb0-47f5-c090-08d548a143ba\"\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/consumer/addUpdate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"consumer",
+						"addUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Consumer by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1b2b0d8-c80a-41de-82a4-5489d943b93a",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/consumer/query?consumerId={{consumerId}}&regionId={{regionId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"consumer",
+						"query"
+					],
+					"query": [
+						{
+							"key": "consumerId",
+							"value": "{{consumerId}}"
+						},
+						{
+							"key": "regionId",
+							"value": "{{regionId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Consumer by Email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "95ac2a73-33c7-4dd8-bc0b-02024794640b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/consumer/query?email=sundeep.palavalli@ext.taylormadegolf.com&regionId={{regionId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"consumer",
+						"query"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sundeep.palavalli@ext.taylormadegolf.com"
+						},
+						{
+							"key": "regionId",
+							"value": "{{regionId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Consumer by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "abac69a3-d841-4b8d-b498-b37df9f3c7d2",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/consumer/query?regionId=D890342D-FCC4-4D4D-2F11-08D5483C74A8&consumerId=5E4FA2A3-843E-46C0-FAB1-08D5483CE2B9&systemId=D6F3A36B-D2E6-4182-8001-08D5483CE271",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"consumer",
+						"query"
+					],
+					"query": [
+						{
+							"key": "regionId",
+							"value": "D890342D-FCC4-4D4D-2F11-08D5483C74A8"
+						},
+						{
+							"key": "consumerId",
+							"value": "5E4FA2A3-843E-46C0-FAB1-08D5483CE2B9"
+						},
+						{
+							"key": "systemId",
+							"value": "D6F3A36B-D2E6-4182-8001-08D5483CE271"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create WhatsInTheBag",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5e3330d4-3e11-4acf-850a-f55a9117967d",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"favorite\": \"false\",\r\n  \"following\": \"false\",\r\n  \"userFavorites\": null,\r\n  \"description\": null,\r\n  \"deleted\": null,\r\n  \"categoryId\": \"{{categoryId}}\",\r\n  \"brandId\": \"{{brandId}}\",\r\n  \"modelId\": \"{{modelId}}\",\r\n  \"planningToPurchase\": \"false\",\r\n  \"consumerId\": \"{{consumerId}}\",\r\n  \"sku\": null,\r\n  \"clubLoftId\": \"{{clubLoftId}}\",\r\n  \"clubShaftFlexId\": \"{{clubShaftFlexId}}\",\r\n  \"clubShaftLengthId\": \"{{clubShaftLengthId}}\",\r\n  \"faceLieAdjustmentId\": \"{{clubLieId}}\",\r\n  \"faceLoftAdjustmentId\": \"{{club_lofts_adjustment_id}}\",\r\n  \"clubCategoryTypeId\": \"{{clubCategoryTypeId}}\",\r\n  \"active\": \"true\"\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/whatsInTheBag/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"whatsInTheBag",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get WhatsInTheBag By ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1dfb04bd-416b-4057-ba6b-22e7701c9302",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/whatsInTheBag/D758A383-D4B1-47D7-4BB2-08D5496B2B10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"whatsInTheBag",
+						"D758A383-D4B1-47D7-4BB2-08D5496B2B10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update WhatsInTheBag",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1435747-b49a-4f36-9f68-64c50cf5ee41",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"97C8C723-1267-4C9D-4BAF-08D5496B2B10\",\n  \"favorite\": \"false\",\n  \"following\": \"false\",\n  \"userFavorites\": null,\n  \"description\": null,\n  \"deleted\": null,\n  \"categoryId\": \"{{categoryId}}\",\n  \"brandId\": \"{{brandId}}\",\n  \"modelId\": \"{{modelId}}\",\n  \"planningToPurchase\": \"false\",\n  \"consumerId\": \"{{consumerId}}\",\n  \"sku\": null,\n  \"clubLoftId\": \"{{clubLoftId}}\",\n  \"clubShaftFlexId\": \"{{clubShaftFlexId}}\",\n  \"clubShaftLengthId\": \"{{clubShaftLengthId}}\",\n  \"faceLieAdjustmentId\": \"{{clubLieId}}\",\n  \"faceLoftAdjustmentId\": \"{{club_lofts_adjustment_id}}\",\n  \"clubCategoryTypeId\": \"{{clubCategoryTypeId}}\",\n  \"active\": \"true\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/whatsInTheBag/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"whatsInTheBag",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Region",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac412046-53c0-44b5-87ec-2d7920331c20",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"code\": \"CAN\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/Region",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"Region"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Region",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0ddc6973-713a-48a3-9600-5f412975aaa5",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/region?take=10&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"region"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "10"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Region by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bbaa7b89-db0e-48bc-a5a9-74abf71702c7",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/Region/{{regionId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"Region",
+						"{{regionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubHand",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a993f52a-e5fe-4a52-b51f-d70d6b2d308f",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubHand?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubHand"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubHand by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ef969e1e-85a1-44a5-9110-3d68656cd93e",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubHand/{{clubHandId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubHand",
+						"{{clubHandId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ClubLoft",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d65484d7-bd9c-48aa-98f0-bfe08d734e63",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"value\": \"Test Loft\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubLoft",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubLoft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubLoft",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "88cbf7a5-e465-4283-854b-819778637bc1",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubLoft?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubLoft"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubLoft by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a1a1308-19a2-483d-b54d-3c3e4e9d3ce4",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubLoft/{{clubLoftId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubLoft",
+						"{{clubLoftId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubLoft by ClubCategoryId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "91393272-0be2-4090-b368-0b17e3e8465a",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubLoft/byCategoryId/1cdc52d9-4ae3-48ab-fbf1-08d5434a9e31",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubLoft",
+						"byCategoryId",
+						"1cdc52d9-4ae3-48ab-fbf1-08d5434a9e31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ClubShaftFlex",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c9b0cbb3-aec0-4c7f-b56b-773b91e20398",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"Test Shaft Flex\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubShaftFlex",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubShaftFlex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubShaftFlex",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ce0926b-bf14-4085-b129-49001263c689",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubShaftFlex?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubShaftFlex"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubShaftFlex by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68634297-5773-4299-bb13-7d1a82efdfb0",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubShaftFlex/{{clubShaftFlexId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubShaftFlex",
+						"{{clubShaftFlexId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ClubShaftLength",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6872f6e0-7749-4ea8-8f68-cf10a6c326c0",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"Test Shaft Length\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubShaftLength",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubShaftLength"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubShaftLength",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dbee607c-e1d6-41b5-be2c-c86efb6e3581",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubShaftLength?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubShaftLength"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubShaftLength by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3aa7cafb-20c4-4b75-8efd-f409024fbd94",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubShaftLength/{{clubShaftLengthId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubShaftLength",
+						"{{clubShaftLengthId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ClubLie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "59992452-cba5-4fb2-9171-101282940eaa",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"4* Upright\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubLie",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubLie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubLie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ac11127-da37-4d47-8e97-f242db23310a",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubLie?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubLie"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubLie by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "60afa3bd-db27-484a-a31d-56758657b166",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/ClubLie/{{clubLieId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"ClubLie",
+						"{{clubLieId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create System",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a23cc1f6-6982-43f6-a736-139d5fb28dcb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"myFittingExp-Test\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/System",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"System"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All System",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1bdc6cc-c549-44ef-928f-d6a28cfdbfd8",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/System?take=9999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"System"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "9999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get System by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2fe42577-bedd-4a3a-b56e-22385b94d6ab",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/System/{{systemId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"System",
+						"{{systemId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ClubCategory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b8a95a0-fe02-4450-98c8-cf748b1066f1",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Driver\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubCategory",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubCategory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "31e2c405-8556-4278-a92e-0b84a1949111",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubCategory?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubCategory"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubCategory by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e9b9714-d9ad-4600-9e9e-c7f0d479660f",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubCategory/{{clubCategoryId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubCategory",
+						"{{clubCategoryId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Brand",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "11270036-f2f4-4fb3-8ba5-8ed93cc2fca2",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Other by Dang\",\n    \"clubCategoryId\": \"{{clubCategoryId}}\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/brand",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"brand"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Brand",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9555d6a4-b80a-44b9-a2bd-97622bf9f022",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/brand?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"brand"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Brand by ClubCategoryId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2bd043eb-a1d4-4c9d-99da-590ea2602123",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/brand/byCategoryId/{{categoryId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"brand",
+						"byCategoryId",
+						"{{categoryId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Brand by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8bf5d576-4c08-47a8-86d9-d602122d2446",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/brand/{{brandId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"brand",
+						"{{brandId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Model",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0dc05849-ef1a-4252-92e8-bdfe1579c89d",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"M1\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/model",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Model",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "08f686e3-3c00-4c9d-83ba-87e8fe5ef3df",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/model?take=9999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"model"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "9999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Model by BrandId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "07c453d7-78e3-49e0-b127-e8a5b9b27c01",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/model/byBrandId/c3e29452-bc0f-438b-dff7-08d5435b91dc",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"model",
+						"byBrandId",
+						"c3e29452-bc0f-438b-dff7-08d5435b91dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Model by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac355f12-77af-4756-93e0-a357451e6b65",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/model/{{modelId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"model",
+						"{{modelId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ClubLoftAdjustment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "75e619b9-c6aa-4850-a0e6-20a85496f8d7",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"Standard\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubLoftAdjustment",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubLoftAdjustment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubLoftAdjustment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c886bfb2-5684-434e-a52a-2cb3b3cdd6bf",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubLoftAdjustment?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubLoftAdjustment"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ClubCategoryType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a42eb838-5b86-4ac4-8380-c8abf4ae5b27",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"2FW\",\n\t\"clubCategoryId\": \"{{clubCategoryId}}\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubCategoryType",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubCategoryType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClubCategoryType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd8624c4-cf20-4022-80de-7f9bd06ca726",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubCategoryType?take=999&skip=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubCategoryType"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "999"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClubCategoryType by ClubCategoryId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59540-1b5e-4b62-92c3-589cbf2e7c8d",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/clubCategoryType/byCategoryId/1379a840-3f70-41f3-4b39-08d540e95db8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"clubCategoryType",
+						"byCategoryId",
+						"1379a840-3f70-41f3-4b39-08d540e95db8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ConsumerExperience",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6bfc30eb-fdf1-4909-9dfd-4fd33853f8d2",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"consumerId\": \"{{consumerId}}\",\r\n  \"regionId\": \"1A30342D-FCC4-4D4D-2F11-08D5483C74A8\",\r\n  \"shiptoId\": \"123456\",\r\n  \"consumerExperience\": {\r\n    \"name\": \"myFittingExp Fitting\",\r\n    \"eventName\": \"TaylorMade Kingm\",\r\n    \"experienceDate\": \"2017-01-01\",\r\n    \"address\": {\r\n      \"addressLine1\": \"5545 Fermi Ct\",\r\n      \"addressLine2\": \"B1\",\r\n      \"addressLine3\": null,\r\n      \"city\": \"Carlsbad\",\r\n      \"state\": \"CA\",\r\n      \"zipCode\": \"92008\",\r\n      \"country\": \"USA\",\r\n      \"systemId\": \"{{systemId}}\"\r\n    }\r\n  }\r\n} \r\n"
+				},
+				"url": {
+					"raw": "{{URL}}/api/consumerExperience/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"consumerExperience",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ConsumerExperience by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e1bf4599-2318-4485-a3f0-47d8493edbe1",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/consumerExperience/{{consumerExperienceId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"consumerExperience",
+						"{{consumerExperienceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ConsumerExperience by ID copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "efed4e5a-f225-46fe-a388-068a8ccab11c",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{CDMToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/api/consumerExperience/query?email=tmagfitting.chad.hill@gmail.com&regionId=2d58f505-a295-44ab-776c-08d540ea0bdc",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"consumerExperience",
+						"query"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "tmagfitting.chad.hill@gmail.com"
+						},
+						{
+							"key": "regionId",
+							"value": "2d58f505-a295-44ab-776c-08d540ea0bdc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

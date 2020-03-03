@@ -1,0 +1,108 @@
+table {
+    thead {
+        color: rgba($black, .54);
+        font-size: 12px;
+        tr {
+            th {
+                font-size: 12px !important;
+                border-top: none !important;
+                border-bottom: 1px solid $main-color !important;
+                vertical-align: middle;
+            }
+        }
+        &.thead-inverse,
+        .table-inverse {
+            th {
+                background-color: $main-color;
+                color: rgba($white, .7);
+            }
+            thead {
+                th {
+                    background-color: $main-color;
+                    color: rgba($white, .7);
+                }
+            }
+        }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) {
+        background-color: lighten($gray-200, 3%);
+        &:hover {
+            @include hover-transition;
+            background-color: $hover;
+        }
+    }
+    tbody {
+        tr {
+            &:hover {
+                @include hover-transition;
+                background-color: $hover;
+            }
+            &.alert-primary {
+                background-color: transparent;
+                &:hover {
+                    background-color: #d3eafd;
+                }
+            }
+            &.alert-warning {
+                background-color: transparent;
+                &:hover {
+                    background-color: #fffbd8;
+                }
+            }
+            &.alert-danger {
+                background-color: transparent;
+                &:hover {
+                    background-color: #fdd9d7;
+                }
+            }
+            th {
+                padding: 0.70rem;
+                vertical-align: middle;
+                border-color: $border-color;
+            }
+            td {
+                padding: 0.70rem;
+                vertical-align: middle !important;
+                border-color: $border-color;
+                display: table-cell !important;
+                .form-check-input {
+                    margin-top: -6px;
+                    margin-left: 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+                i {
+                    font-size: 24px;
+                }
+            }
+            &.active-tr {
+                background-color: $active-tr;
+                td {
+                    font-weight: 600;
+                }
+            }
+        }
+        .table-profile-photo {
+            height: 50px;
+            width: 50px;
+            background-size: cover;
+        }
+    }
+    .btn {
+        margin-bottom: 0;
+    }
+}
+
+//-------Pagination-----------
+.pagination {
+    .page-item.active {
+        .page-link {
+            background-color: $main-color;
+            border-color: $main-color;
+        }
+    }
+    .page-link {
+        color: $main-color;
+    }
+}

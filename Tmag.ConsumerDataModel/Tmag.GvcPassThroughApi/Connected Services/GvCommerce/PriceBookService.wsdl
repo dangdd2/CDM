@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="https://pubservices.gvcommerce.com/PriceBookService/2014/09" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PriceBookService" targetNamespace="https://pubservices.gvcommerce.com/PriceBookService/2014/09" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IPriceBookService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10 />
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss10>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://pubservices.gvcommerce.com/PriceBookService/2014/09/Imports">
+      <xsd:import schemaLocation="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd1" namespace="https://pubservices.gvcommerce.com/PriceBookService/2014/09" />
+      <xsd:import schemaLocation="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPriceBookService_GetPriceBookFull_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceBookFull" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetPriceBookFull_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceBookFullResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetPriceBookFull_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetPriceBookItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceBookItems" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetPriceBookItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceBookItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetPriceBookItems_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetProductTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetProductTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetProductTypeList_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetBrandList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandList" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetBrandList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetBrandList_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetModelList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelList" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetModelList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetModelList_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetShaftList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShaftList" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetShaftList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShaftListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetShaftList_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetItemPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemPrice" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetItemPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetItemPrice_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetQuoteByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuoteByID" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetQuoteByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuoteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetQuoteByID_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_AddItemToQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemToQuote" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_AddItemToQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemToQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_AddItemToQuote_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_RemoveItemFromQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemFromQuote" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_RemoveItemFromQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemFromQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_RemoveItemFromQuote_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_UpdateItemQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_UpdateItemQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_UpdateItemQuantity_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_SaveQuoteByEmailAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQuoteByEmailAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_SaveQuoteByEmailAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQuoteByEmailAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_SaveQuoteByEmailAddress_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetQuoteByEmailAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuoteByEmailAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetQuoteByEmailAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuoteByEmailAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_GetQuoteByEmailAddress_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_ProcessBatchTradeIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessBatchTradeIn" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_ProcessBatchTradeIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessBatchTradeInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPriceBookService_ProcessBatchTradeIn_PriceBookFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:PriceBookFault" />
+  </wsdl:message>
+  <wsdl:portType name="IPriceBookService">
+    <wsdl:operation name="GetPriceBookFull">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookFull" message="tns:IPriceBookService_GetPriceBookFull_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookFullResponse" message="tns:IPriceBookService_GetPriceBookFull_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookFullPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetPriceBookFull_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceBookItems">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookItems" message="tns:IPriceBookService_GetPriceBookItems_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookItemsResponse" message="tns:IPriceBookService_GetPriceBookItems_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookItemsPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetPriceBookItems_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductTypeList">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetProductTypeList" message="tns:IPriceBookService_GetProductTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetProductTypeListResponse" message="tns:IPriceBookService_GetProductTypeList_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetProductTypeListPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetProductTypeList_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandList">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetBrandList" message="tns:IPriceBookService_GetBrandList_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetBrandListResponse" message="tns:IPriceBookService_GetBrandList_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetBrandListPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetBrandList_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelList">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetModelList" message="tns:IPriceBookService_GetModelList_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetModelListResponse" message="tns:IPriceBookService_GetModelList_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetModelListPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetModelList_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShaftList">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetShaftList" message="tns:IPriceBookService_GetShaftList_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetShaftListResponse" message="tns:IPriceBookService_GetShaftList_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetShaftListPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetShaftList_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPrice">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetItemPrice" message="tns:IPriceBookService_GetItemPrice_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetItemPriceResponse" message="tns:IPriceBookService_GetItemPrice_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetItemPricePriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetItemPrice_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuoteByID">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByID" message="tns:IPriceBookService_GetQuoteByID_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByIDResponse" message="tns:IPriceBookService_GetQuoteByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByIDPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetQuoteByID_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemToQuote">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/AddItemToQuote" message="tns:IPriceBookService_AddItemToQuote_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/AddItemToQuoteResponse" message="tns:IPriceBookService_AddItemToQuote_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/AddItemToQuotePriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_AddItemToQuote_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItemFromQuote">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/RemoveItemFromQuote" message="tns:IPriceBookService_RemoveItemFromQuote_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/RemoveItemFromQuoteResponse" message="tns:IPriceBookService_RemoveItemFromQuote_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/RemoveItemFromQuotePriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_RemoveItemFromQuote_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemQuantity">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/UpdateItemQuantity" message="tns:IPriceBookService_UpdateItemQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/UpdateItemQuantityResponse" message="tns:IPriceBookService_UpdateItemQuantity_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/UpdateItemQuantityPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_UpdateItemQuantity_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuoteByEmailAddress">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/SaveQuoteByEmailAddress" message="tns:IPriceBookService_SaveQuoteByEmailAddress_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/SaveQuoteByEmailAddressResponse" message="tns:IPriceBookService_SaveQuoteByEmailAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/SaveQuoteByEmailAddressPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_SaveQuoteByEmailAddress_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuoteByEmailAddress">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByEmailAddress" message="tns:IPriceBookService_GetQuoteByEmailAddress_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByEmailAddressResponse" message="tns:IPriceBookService_GetQuoteByEmailAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByEmailAddressPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_GetQuoteByEmailAddress_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessBatchTradeIn">
+      <wsdl:input wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/ProcessBatchTradeIn" message="tns:IPriceBookService_ProcessBatchTradeIn_InputMessage" />
+      <wsdl:output wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/ProcessBatchTradeInResponse" message="tns:IPriceBookService_ProcessBatchTradeIn_OutputMessage" />
+      <wsdl:fault wsaw:Action="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/ProcessBatchTradeInPriceBookFaultFault" name="PriceBookFaultFault" message="tns:IPriceBookService_ProcessBatchTradeIn_PriceBookFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPriceBookService" type="tns:IPriceBookService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IPriceBookService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPriceBookFull">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookFull" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceBookItems">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetPriceBookItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductTypeList">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetProductTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandList">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetBrandList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelList">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetModelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetShaftList">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetShaftList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPrice">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetItemPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuoteByID">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemToQuote">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/AddItemToQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItemFromQuote">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/RemoveItemFromQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemQuantity">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/UpdateItemQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuoteByEmailAddress">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/SaveQuoteByEmailAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuoteByEmailAddress">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/GetQuoteByEmailAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessBatchTradeIn">
+      <soap:operation soapAction="https://pubservices.gvcommerce.com/PriceBookService/2014/09/IPriceBookService/ProcessBatchTradeIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="PriceBookFaultFault">
+        <soap:fault use="literal" name="PriceBookFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PriceBookService">
+    <wsdl:port name="BasicHttpBinding_IPriceBookService" binding="tns:BasicHttpBinding_IPriceBookService">
+      <soap:address location="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

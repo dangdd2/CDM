@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2b0de825-7fc8-4d75-88c2-0ca5fa4e9a77" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PriceBookService.xsd" MetadataType="Schema" ID="b1abab4e-4efa-4753-a586-a06372487f57" SourceId="1" SourceUrl="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PriceBookService1.xsd" MetadataType="Schema" ID="58f69221-8c0f-467b-a140-b72e5c1ddc23" SourceId="1" SourceUrl="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PriceBookService2.xsd" MetadataType="Schema" ID="862e890c-a14f-41e3-82ee-cfb8fd1778bd" SourceId="1" SourceUrl="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PriceBookService3.xsd" MetadataType="Schema" ID="e863151a-41dc-406f-b1be-9e35d21461c0" SourceId="1" SourceUrl="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PriceBookService.wsdl" MetadataType="Wsdl" ID="a4ce49c7-1ad3-43af-83f4-a057af24400e" SourceId="1" SourceUrl="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?wsdl" />
+    <MetadataFile FileName="PriceBookService.disco" MetadataType="Disco" ID="0a0975f7-a2c2-40f4-a093-eae1ac1e7bb7" SourceId="1" SourceUrl="https://pubservices.gvcommerce.com/PriceBookService/PriceBookService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

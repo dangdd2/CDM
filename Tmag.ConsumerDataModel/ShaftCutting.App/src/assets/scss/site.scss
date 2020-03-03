@@ -1,0 +1,34 @@
+@import "fontAwesome/css/fontawesome-pro-light";
+@import "fontAwesome/css/fontawesome-pro-core";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "_variables";
+@import "_material";
+//Overrides//
+@import "_alerts";
+@import "_buttons";
+@import "_card";
+@import "_dropdowns";
+@import "_fonts";
+@import "_forms";
+@import "_tables";
+@import "_text";
+@import "_transitions";
+//Media-Queries//
+@import "_media-queries";
+
+html,
+body {
+    //font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    background-color: $bg-color;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: filter .5s ease-in-out;
+
+ text-align:center;    
+}
